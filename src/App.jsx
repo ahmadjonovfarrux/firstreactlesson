@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className=" container h-screen grid place-items-center">
-      <div className="container grid items-center content-center max-w-3xl bg-amber-400 rounded-2xl">
+      <div className="container grid items-center content-center max-w-3xl bg-amber-400 rounded-2xl p-3">
         {/* <div> */}
         <h1 className="title text-5xl font-bold mt-5 mb-5 ">
           Take a sit and write bro
