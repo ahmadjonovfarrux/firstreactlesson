@@ -1,10 +1,17 @@
-function Modal({ t, setShowModal, deleteTitle }) {
+function Modal({ t, deleteTitle, setShowModal }) {
   return (
-    <div className="modal">
+    <div className="modal__box ">
       <p>Do you want to remove {t.title}</p>
       <div className="modal__btn__div">
-        <button onClick={() => deleteTitle(t.id)}>Yes</button>
-        <button onClick={() => setShowModal(false)}>No</button>
+        <button className="btn btn-secondary" onClick={() => deleteTitle(t.id)}>
+          Yes
+        </button>
+        <button
+          className="btn btn-secondary"
+          onClick={() => setShowModal(false)}
+        >
+          No
+        </button>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     if (error) {
       setTimeout(() => {
-        console.log("hello");
+        console.log("You have problem");
       }, 5000);
     }
 
@@ -39,7 +39,7 @@ function App() {
     e.preventDefault();
     if (text.length == 0) {
       setError("Write something please");
-    } else if (text.length < 4) {
+    } else if (text.length <= 4) {
       setError("Write more than 4 words");
     } else {
       setTitles([
@@ -56,20 +56,22 @@ function App() {
   };
 
   return (
-    <div className="container   ">
-      <h1 className="title text-5xl font-bold mt-5 mb-5">Titles</h1>
-      <GetForm
-        handleSubmit={handleSubmit}
-        error={error}
-        text={text}
-        setText={setText}
-      />
-      <ul className="list">
-        {!titles.length && <h2 className="">You don't have any titles</h2>}
-        {titles.length > 0 && (
-          <TitleList titles={titles} deleteTitle={deleteTitle} />
-        )}
-      </ul>
+    <div className="container h-screen grid place-items-center content-center ">
+      <div>
+        <h1 className="title text-5xl font-bold mt-5 mb-5 ">Titles</h1>
+        <GetForm
+          handleSubmit={handleSubmit}
+          error={error}
+          text={text}
+          setText={setText}
+        />
+        <ul className="list mt-4">
+          {!titles.length && <h2>You don't have any titles</h2>}
+          {titles.length > 0 && (
+            <TitleList titles={titles} deleteTitle={deleteTitle}  />
+          )}
+        </ul>
+      </div>
     </div>
   );
 }

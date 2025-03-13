@@ -1,7 +1,10 @@
 function GetForm({ handleSubmit, text, setText, error }) {
   return (
     <>
-      <form className="form" onSubmit={handleSubmit}>
+      <form
+        className="form max-w-96 flex flex-col gap-4"
+        onSubmit={handleSubmit}
+      >
         <input
           className="input"
           onChange={(e) => {
@@ -11,7 +14,7 @@ function GetForm({ handleSubmit, text, setText, error }) {
           value={text}
           type="text"
         />
-        <button className="btn" onClick={handleSubmit}>
+        <button className="btn btn-primary" onClick={handleSubmit}>
           Add
         </button>
         {error && <p>{error}</p>}
