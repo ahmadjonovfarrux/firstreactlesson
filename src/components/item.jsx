@@ -9,9 +9,14 @@ function Item({ t, deleteTitle }) {
         <Modal deleteTitle={deleteTitle} setShowModal={setShowModal} t={t} />
       )}
 
-      <li>
-        <p>{t.title}</p>
-        <button onClick={() => setShowModal(true)}>Delete</button>
+      <li className="max-w-96 flex items-center place-content-between">
+        <p className="font-bold text-lg">{t.title}</p>
+        <button
+          className="btn btn-secondary"
+          onClick={() => setShowModal(true)}
+        >
+          Delete
+        </button>
       </li>
     </>
   );
