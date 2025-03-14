@@ -2,7 +2,7 @@ function GetForm({ handleSubmit, text, setText, error }) {
   return (
     <>
       <form
-        className="form max-w-96 flex flex-col gap-4"
+        className="form max-w-96 flex flex-col gap-3"
         onSubmit={handleSubmit}
       >
         <input
@@ -13,6 +13,7 @@ function GetForm({ handleSubmit, text, setText, error }) {
           }}
           value={text}
           type="text"
+          placeholder="Write something..."
         />
         <button className="btn btn-primary" onClick={handleSubmit}>
           Add

@@ -56,9 +56,12 @@ function App() {
   };
 
   return (
-    <div className="container h-screen grid place-items-center content-center ">
-      <div>
-        <h1 className="title text-5xl font-bold mt-5 mb-5 ">Titles</h1>
+    <div className=" container h-screen grid place-items-center">
+      <div className="container grid items-center content-center max-w-3xl bg-amber-400 rounded-2xl p-3">
+        {/* <div> */}
+        <h1 className="title text-5xl font-bold mt-5 mb-5 ">
+          Take a sit and write bro
+        </h1>
         <GetForm
           handleSubmit={handleSubmit}
           error={error}
@@ -68,9 +71,10 @@ function App() {
         <ul className="list mt-4">
           {!titles.length && <h2>You don't have any titles</h2>}
           {titles.length > 0 && (
-            <TitleList titles={titles} deleteTitle={deleteTitle}  />
+            <TitleList titles={titles} deleteTitle={deleteTitle} />
           )}
         </ul>
+        {/* </div> */}
       </div>
     </div>
   );
