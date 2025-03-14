@@ -1,4 +1,5 @@
 function Modal({ t, deleteTitle, setShowModal }) {
+  // Modal
   return (
     <div className="modal__box flex flex-col gap-4 rounded-2xl">
       <p className="text-2xl">Do you want to remove {t.title}</p>
